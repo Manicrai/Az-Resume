@@ -2,6 +2,7 @@ using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json.Serialization; // <--- 1. AGREGAMOS ESTA LIBRERÍA
 
 namespace backend
 {
@@ -56,9 +57,13 @@ namespace backend
         public IActionResult? HttpResponse { get; set; }
     }
 
+    // 2. AQUÍ ESTÁ EL CAMBIO IMPORTANTE
     public class Counter
     {
+        [JsonPropertyName("id")] // Le dice a Cosmos: "Usa minúscula 'id'"
         public string? Id { get; set; }
+
+        [JsonPropertyName("count")] // Le dice a Cosmos: "Usa minúscula 'count'"
         public int Count { get; set; }
     }
 }
