@@ -1,203 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Marcos Sena</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☁️</text></svg>">
+    <title>Marcos Sena - Cloud Administrator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☁️</text></svg>">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ebf3f8;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0f172a;
+        }
+        .splash-card {
+            background-color: #ffffff;
+            padding: 60px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            animation: fadeIn 0.8s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            font-size: 2.8em;
+            margin: 0 0 10px 0;
+            letter-spacing: -1px;
+        }
+        p {
+            font-size: 1.2em;
+            color: #0ea5e9;
+            font-weight: 500;
+            margin: 0 0 40px 0;
+        }
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .btn-es {
+            background-color: #0f172a;
+            color: #ffffff;
+            border: 2px solid #0f172a;
+        }
+        .btn-es:hover {
+            background-color: #1e293b;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2);
+        }
+        .btn-en {
+            background-color: transparent;
+            color: #0f172a;
+            border: 2px solid #0f172a;
+        }
+        .btn-en:hover {
+            background-color: #f8fafc;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(15, 23, 42, 0.1);
+        }
+    </style>
 </head>
-
 <body>
-    <div class="resume-container">
-        <!-- Sidebar (Left Column) -->
-        <aside class="sidebar">
-            <section>
-                <h3>Contacto</h3>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span>📍</span> Caracas, Venezuela
-                    </div>
-                    <a href="mailto:Marcosena08@gmail.com" class="contact-item">
-                        <span>📧</span> Marcosena08@gmail.com
-                    </a>
-                    <a href="tel:+584144670308" class="contact-item">
-                        <span>📱</span> +58 414-4670308
-                    </a>
-                    <a href="tel:+584162543368" class="contact-item">
-                        <span>📱</span> +58 416-2543368
-                    </a>
-                    <a href="https://www.linkedin.com/in/marcos-sena-954158252" target="_blank" class="contact-item">
-                        <span>🔗</span> LinkedIn
-                    </a>
-                    <a href="https://github.com/Manicrai" class="contact-item">
-                        <span>🐙</span> GitHub
-                    </a>
-                    <a href="cv_marcos_sena.pdf" download="CV_Marcos_Sena.pdf" class="contact-item download-btn">
-                        <span>📄</span> Descargar CV (PDF)
-                    </a>
-                </div>
-            </section>
-
-            <section>
-                <h3>Certificaciones</h3>
-                <div class="cert-item">
-                    <span class="cert-name">Azure Administrator Associate</span>
-                    <span class="year">(AZ-104)</span>
-                </div>
-                <div class="cert-item">
-                    <span class="cert-name">Azure Virtual Desktop Specialty</span>
-                    <span class="year">(AZ-140)</span>
-                </div>
-            </section>
-
-            <section>
-                <h3>Habilidades</h3>
-
-                <div class="skill-category">
-                    <span class="category-title">Cloud & Virtualización</span>
-                    <div class="skill-list">
-                        Azure Administration, Azure Virtual Desktop (AVD), Office 365, Microsoft Entra ID, Gestión de
-                        VMs.
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <span class="category-title">Sistemas Operativos</span>
-                    <div class="skill-list">
-                        Windows Server (Administración avanzada), Linux (Gestión y hardening), Análisis de rendimiento.
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <span class="category-title">Desarrollo & DevOps</span>
-                    <div class="skill-list">
-                        C# (.NET 8), Azure Functions (Serverless), PowerShell, Git/GitHub, GitHub Actions.
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <span class="category-title">Datos & Redes</span>
-                    <div class="skill-list">
-                        Azure Cosmos DB, SQL Server, Networking (DNS, DHCP, TCP/IP), Monitoreo de Infraestructura.
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h3>Educación</h3>
-                <div class="education-item">
-                    <span class="degree">Ingeniero de Sistemas</span>
-                    <span class="school">Univ. Bicentenaria de Aragua</span>
-                    <span class="year">2018 - 2023</span>
-                </div>
-            </section>
-        </aside>
-
-        <!-- Main Content (Right Column) -->
-        <main class="main-content">
-            <header>
-                <h1>Marcos Sena</h1>
-                <div class="job-headline">Cloud Administrator | Azure Specialist</div>
-            </header>
-
-            <section>
-                <h2>Perfil Profesional</h2>
-                <p class="profile-text">
-                    Ingeniero de Sistemas certificado en Azure (AZ-104, AZ-140) con sólida trayectoria en administración
-                    de infraestructura híbrida.
-                    Actualmente enfocado en la optimización de sistemas operativos (Windows/Linux) y desarrollo de
-                    soluciones Cloud Native con <strong>C#, .NET 8 y Azure Functions</strong>.
-                    Combino experiencia en soporte crítico con habilidades de programación para automatizar procesos y
-                    mejorar la eficiencia operativa.
-                </p>
-            </section>
-
-            <section>
-                <h2>Experiencia Laboral</h2>
-
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-role">Consultor de Infraestructura y Sistemas (Freelance)</div>
-                        <div class="date">Oct 2025 – Presente</div>
-                    </div>
-                    <div class="company">Servicios Profesionales IT</div>
-                    <ul class="description-list">
-                        <li>Administración avanzada de servidores <strong>Linux y Windows</strong>, asegurando la
-                            estabilidad y seguridad del entorno.</li>
-                        <li><strong>Análisis de comportamiento de Máquinas Virtuales (VMs):</strong> Diagnóstico de
-                            cuellos de botella, optimización de recursos y tuning de rendimiento.</li>
-                        <li>Monitoreo proactivo de infraestructura crítica y resolución de incidencias de sistema nivel
-                            2.</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-role">Analista de Monitoreo y Service Desk</div>
-                        <div class="date">Jun 2024 – Sep 2025</div>
-                    </div>
-                    <div class="company">MT 2005 C.A.</div>
-                    <ul class="description-list">
-                        <li>Administración de entornos Cloud en <strong>Azure y Office 365</strong>, gestionando
-                            identidades y accesos.</li>
-                        <li>Soporte técnico especializado para infraestructura híbrida en clientes del sector banca.
-                        </li>
-                        <li>Ejecución de políticas de seguridad y cumplimiento en plataformas Microsoft.</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-role">Analista Service Desk</div>
-                        <div class="date">Dic 2023 – Jun 2024</div>
-                    </div>
-                    <div class="company">Contacto Integral C.A.</div>
-                    <ul class="description-list">
-                        <li>Soporte técnico de primer nivel y documentación de incidentes bajo metodología ITIL.</li>
-                        <li>Gestión de reportes de servicio y métricas de atención para banca.</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="job-header">
-                        <div class="job-role">Programador</div>
-                        <div class="date">Jun 2022 – Sep 2022</div>
-                    </div>
-                    <div class="company">Centro Médico Maracay</div>
-                    <ul class="description-list">
-                        <li>Desarrollo de sistema de gestión web y automatización de tickets de soporte.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section>
-                <h2>Proyectos Destacados</h2>
-                <div class="project-item">
-                    <div class="job-header">
-                        <div class="job-role">Serverless Cloud Resume API</div>
-                        <div class="date">En desarrollo</div>
-                    </div>
-                    <ul class="description-list">
-                        <li>Arquitectura y desarrollo de una API serverless con <strong>Azure Functions</strong> y
-                            <strong>C# (.NET 8)</strong>.
-                        </li>
-                        <li>Integración con <strong>Azure Cosmos DB</strong> para persistencia de datos y análisis de
-                            visitas en tiempo real.</li>
-                        <li>Implementación de pipelines de CI/CD con <strong>GitHub Actions</strong> para despliegue
-                            automatizado.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <div class="footer">
-                <span id="counter" class="visitor-badge">Cargando visitas...</span>
-            </div>
-        </main>
+    <div class="splash-card">
+        <h1>Marcos Sena</h1>
+        <p>Cloud Administrator | Azure Specialist</p>
+        <div class="btn-group">
+            <a href="resume-es.html" class="btn btn-es">Español</a>
+            <a href="resume-en.html" class="btn btn-en">English</a>
+        </div>
     </div>
-    <script src="main.js"></script>
 </body>
-
 </html>

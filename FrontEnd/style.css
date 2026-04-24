@@ -260,7 +260,7 @@ h2 {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .resume-container {
         grid-template-columns: 1fr;
     }
@@ -268,7 +268,6 @@ h2 {
     .sidebar {
         padding: 30px;
         order: 2;
-        /* Put sidebar at bottom on mobile? Or top? Usually bottom for secondary info, but Contact is important. Let's keep it orderly. */
     }
 
     header {
@@ -289,69 +288,132 @@ h2 {
 @media print {
     @page {
         margin: 0;
-        /* Elimina los márgenes predeterminados del navegador */
         size: A4 portrait;
-        /* Fuerza el tamaño A4 */
     }
 
     body {
         background-color: var(--white);
         padding: 0;
         margin: 0;
-        font-size: 11px;
-        /* Reducimos ligeramente el tamaño de fuente para que encaje todo en 1 página */
+        font-size: 10.5px !important; /* Scale down to ensure 1-page fit */
+        line-height: 1.4 !important;
     }
 
     .resume-container {
         box-shadow: none;
-        max-width: 100%;
-        width: 100%;
-        height: 100%;
-        grid-template-columns: 260px 1fr;
-        /* Mantiene las dos columnas */
+        width: 100% !important;
+        max-width: 100% !important;
+        grid-template-columns: 30% 70% !important; /* Exact 300/1000 proportion from screen */
         border-radius: 0;
+        margin: 0;
+        min-height: 100vh;
     }
 
     .sidebar {
-        padding: 30px 20px !important;
+        padding: 30px 20px !important; /* Scaled down */
         background-color: var(--primary-color) !important;
         color: #e2e8f0 !important;
-        /* Asegura el color del texto de la barra lateral */
+        gap: 15px !important; /* Reduced from 30px */
+        order: 0 !important; /* Ensure it stays on the left */
     }
 
     .main-content {
-        padding: 30px 40px !important;
+        padding: 30px 35px !important; /* Scaled down */
     }
 
     header {
-        margin-bottom: 20px;
-        padding-bottom: 10px;
+        margin-bottom: 20px !important;
+        padding-bottom: 12px !important;
     }
 
     section {
-        margin-bottom: 20px;
+        margin-bottom: 18px !important;
     }
 
     .experience-item,
     .project-item {
-        margin-bottom: 15px;
+        margin-bottom: 15px !important;
     }
 
-    /* Prevent page breaks */
+    h1 {
+        font-size: 2.4em !important; 
+        margin-bottom: 5px !important;
+    }
+
+    .job-headline {
+        font-size: 1.2em !important;
+        margin-top: 0 !important;
+    }
+
+    h2 {
+        font-size: 1.4em !important;
+        margin-bottom: 10px !important;
+        padding-left: 10px !important;
+    }
+
+    .job-header {
+        margin-bottom: 2px !important;
+        gap: 10px !important;
+    }
+
+    .job-role {
+        font-size: 1.1em !important;
+    }
+
+    .company {
+        margin-bottom: 4px !important;
+        font-size: 1em !important;
+    }
+
+    .date {
+        padding: 2px 8px !important;
+        font-size: 0.9em !important;
+    }
+
+    /* Reduce spacing in lists */
+    .description-list {
+        margin-top: 4px !important;
+        padding-left: 15px !important;
+    }
+
+    .description-list li {
+        margin-bottom: 3px !important;
+    }
+
+    /* Sidebar adjustments */
+    .sidebar h3 {
+        margin-bottom: 10px !important;
+        padding-bottom: 5px !important;
+        font-size: 1.1em !important;
+    }
+
+    .contact-info {
+        gap: 8px !important; 
+    }
+
+    .contact-item span {
+        font-size: 1.1em !important;
+    }
+
+    .skill-category {
+        margin-bottom: 12px !important;
+    }
+
+    .category-title {
+        margin-bottom: 4px !important;
+    }
+
+    .cert-item, .education-item {
+        margin-bottom: 8px !important; 
+    }
+
+    /* Prevent page breaks inside items */
     .experience-item,
     .project-item,
     .skill-category,
     section {
         page-break-inside: avoid;
         break-inside: avoid;
-    }
-
-    h1 {
-        font-size: 2.2em;
-    }
-
-    h2 {
-        margin-bottom: 10px;
     }
 
     /* Hide elements not needed in PDF */
